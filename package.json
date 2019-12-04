@@ -1,6 +1,6 @@
 {
   "name": "@brendonjohn/status-finder",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -32,7 +32,8 @@
   "ava": {
     "compileEnhancements": false,
     "extensions": [
-      "ts", "tsx"
+      "ts",
+      "tsx"
     ],
     "require": [
       "ts-node/register"
