@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "build": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2015",
+    "outDir": "dist"
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "*.test.ts"
+  ],
+  "include": [
+    "src/**/*"
+  ]
+}

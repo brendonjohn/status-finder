@@ -5,15 +5,16 @@
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "pkg-build",
+    "build": "./node_modules/.bin/tsc",
+    "start": "./node_modules/.bin/tsc --watch",
     "prepublish": "npm run build",
     "postpublish": "git push origin master --tags",
-    "test": "NODE_ENV=test pkg-test",
-    "lint": "pkg-lint",
-    "tidy": "pkg-tidy"
+    "test": "ava --verbose"
   },
   "devDependencies": {
-    "@mishguru/package": "6.0.0-next.30"
+    "ava": "^2.4.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.2"
   },
   "repository": {
     "type": "git",
@@ -27,5 +28,18 @@
   "homepage": "https://github.com/brendonjohn/status-finder#readme",
   "publishConfig": {
     "access": "public"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "extensions": [
+      "ts", "tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "files": [
+      "src/**/*test.ts",
+      "!dist"
+    ]
   }
 }

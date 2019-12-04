@@ -38,7 +38,7 @@ const simpleTree: StatusTree<CatDog, string> = [
 ]
 
 test('UNKNOWN is returned when nothing is found', (t) => {
-  const result = statusFinder({}, simpleTree, 'UNKNOWN')
+  const result = statusFinder({} as CatDog, simpleTree, 'UNKNOWN')
 
   t.is(result, 'UNKNOWN')
 })
@@ -48,7 +48,7 @@ test('a nested status can be found', (t) => {
     {
       thisIsCat: true,
       thisIsDog: true
-    },
+    } as CatDog,
     simpleTree,
     'FAILED'
   )
@@ -60,7 +60,7 @@ test('A parent node is the fallback result if none of the subStates match', (t) 
   const dogResult = statusFinder(
     {
       thisIsDog: true
-    },
+    } as CatDog,
     simpleTree,
     'FAILED'
   )
@@ -68,7 +68,7 @@ test('A parent node is the fallback result if none of the subStates match', (t) 
   const catResult = statusFinder(
     {
       thisIsCat: true
-    },
+    } as CatDog,
     simpleTree,
     'FAILED'
   )

@@ -35,7 +35,7 @@ const simpleTree: StatusTree<CatDog, string> = [
 ]
 
 test('UNKNOWN is returned when nothing is found', (t) => {
-  const result = statusFinder<object, string>({}, simpleTree, 'UNKNOWN')
+  const result = statusFinder<object, string>({}, simpleTree as StatusTree<object, string>, 'UNKNOWN')
 
   t.is(result, 'UNKNOWN')
 })
@@ -63,7 +63,7 @@ test('the last status can be retrieved', (t) => {
   const result = statusFinder(
     {
       thisIsDog: true
-    },
+    } as CatDog,
     simpleTree,
     'TOTALLY UNMATCHED'
   )

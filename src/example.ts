@@ -65,14 +65,18 @@ const statusTree: SessionTree = [
         subStates: [
           {
             status: session.AWAITING_VERIFICATION_TOKEN,
-            test: ({ verification: { attempt } }) =>
-              attempt != null && attempt.token == null,
+            test: ({ verification }) =>
+              verification != null
+              && verification.attempt != null
+              && verification.attempt.token == null,
             subStates: []
           },
           {
             status: session.ATTEMPTING_VERIFICATION,
-            test: ({ verification: { attempt } }) =>
-              attempt != null && attempt.token != null,
+            test: ({ verification }) =>
+              verification != null
+              && verification.attempt != null
+              && verification.attempt.token != null,
             subStates: []
           }
         ]
@@ -99,7 +103,7 @@ const state: SessionState = {
   verification: {
     isComplete: false,
     attempt: {
-      token: null
+      token: undefined
     }
   }
 }
