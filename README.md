@@ -1,4 +1,4 @@
-# @mishguru/status-finder #
+# @brendonjohn/status-finder #
 
 Business logic tends to have many `if` statements and embedded `if` statements to decide what the current status is.
 
@@ -9,7 +9,7 @@ I thought I was making a finite state machine… but that’s really something e
 ## Install
 
 ```
-npm install @mishguru/status-finder
+npm install @brendonjohn/status-finder
 ```
 
 ## Goals
@@ -80,7 +80,7 @@ I've put together an example that shows sub states being used. See [src/example.
 
 ## License
 
-Copyright 2019 Mish Guru Limited
+Copyright 2019 @brendonjohn
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
