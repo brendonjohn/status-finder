@@ -1,5 +1,5 @@
 {
-  "name": "@mishguru/status-finder",
+  "name": "@brendonjohn/status-finder",
   "version": "0.3.0",
   "description": "",
   "main": "dist/index.js",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mishguruorg/status-finder.git"
+    "url": "git+https://github.com/brendonjohn/status-finder.git"
   },
-  "author": "Mish Guru <dev@mish.guru",
+  "author": "Brendon John Muschamp <brendonmuschamp@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mishguruorg/status-finder/issues"
+    "url": "https://github.com/brendonjohn/status-finder/issues"
   },
-  "homepage": "https://github.com/mishguruorg/status-finder#readme",
+  "homepage": "https://github.com/brendonjohn/status-finder#readme",
   "publishConfig": {
     "access": "public"
   }
