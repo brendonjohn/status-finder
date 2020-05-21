@@ -33,3 +33,6 @@ src
 testHelpers
 *.spec.js
 *.spec.js.flow
+
+yarn.lock
+package-lock.json
