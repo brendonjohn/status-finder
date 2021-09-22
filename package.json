@@ -5,16 +5,16 @@
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "./node_modules/.bin/tsc",
-    "start": "./node_modules/.bin/tsc --watch",
-    "prepublish": "npm run build",
-    "postpublish": "git push origin master --tags",
+    "build": "tsc",
+    "start": "tsc --watch",
+    "prepublish": "tsc",
+    "postpublish": "git push origin main --tags",
     "test": "ava --verbose"
   },
   "devDependencies": {
-    "ava": "^3.8.2",
-    "ts-node": "^8.10.1",
-    "typescript": "^3.9.3"
+    "ava": "^3.15.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   },
   "repository": {
     "type": "git",
